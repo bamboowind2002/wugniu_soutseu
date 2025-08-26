@@ -1474,7 +1474,7 @@ use_preset_vocabulary: true
 縛	vu6sc
 縛	vu6sf
 跗	vu6zf
-廡	vu2gw
+廡	vu6gw
 都	tou1ev
 都	tou1ev
 多	tou1xx
@@ -1502,8 +1502,8 @@ use_preset_vocabulary: true
 堍	thou3tt
 橢	thou3mo
 橢	thou3ms
-唾	thou3ki
-唾	thou3ki
+唾	thou5ki
+唾	thou5ki
 妥	thou3vn
 兔	thou5dd
 褪	thou5yt
@@ -1540,8 +1540,6 @@ use_preset_vocabulary: true
 鍍	dou6jd
 肚	dou6ot
 杜	dou6mt
-蠹	dou6ai
-蠹	dou6iu
 大	dou6ad
 大	dou6ad
 大	dou6ad
@@ -1551,14 +1549,15 @@ use_preset_vocabulary: true
 墮	dou6to
 墮	dou6ts
 惰	dou6xo
-咄	dou6ki
 拸	dou6fd
 拸	dou6fd
 拸	dou6fd
 拸	dou6fd
 奴	nou1ny
 孥	nou1zn
+孥	nou2zn
 駑	nou1mn
+駑	nou2mn
 捼	nou1fw
 捼	nou1fw
 捼	nou1fw
@@ -1853,7 +1852,7 @@ use_preset_vocabulary: true
 挎	khou1fk
 苦	khou3cg
 可	khou3dk
-坷	khou3tk
+坷	khou1tk
 庫	khou5gi
 庫	khou5gi
 褲	khou5yk
@@ -1880,6 +1879,10 @@ use_preset_vocabulary: true
 吾	ngou6wk
 吾	ngou6kw
 吾	ngou6kw
+吾	ngou2wk
+吾	ngou2wk
+吾	ngou2kw
+吾	ngou2kw
 悟	ngou6xw
 寤	ngou6bw
 晤	ngou6ow
@@ -2171,6 +2174,8 @@ use_preset_vocabulary: true
 栩	shiu3my
 煦	shiu3hx
 煦	shiu3hj
+煦	shiu5hx
+煦	shiu5hj
 酗	shiu5yx
 酗	shiu5yx
 余	yu2rb
@@ -2257,8 +2262,6 @@ use_preset_vocabulary: true
 盂	iu1my
 紆	iu1sy
 羽	iu1xx
-與	iu3ba
-與	iu3jb
 嶼	iu3uy
 喂	iu5kw
 餵	iu5uw
@@ -11628,7 +11631,7 @@ use_preset_vocabulary: true
 喥	doq8kd
 踱	doq8zd
 踱	doq8zd
-咄	doq8ki
+咄	teh8ki
 毒	doq8fm
 毒	doq8fm
 讀	doq8ym

@@ -916,8 +916,8 @@ use_preset_vocabulary: true
 樨	si1mx
 些	si1ec
 些	si1ec
-圾	si#tj
-圾	si#tj
+圾	si1tj
+圾	si1tj
 死	si3db
 洗	si3dx
 洗	si3dx
@@ -1140,7 +1140,6 @@ use_preset_vocabulary: true
 兒	gni2je
 兒	gni2je
 銀	gni2jg
-垠	gni2tg
 鸝	gni2nl
 擬	gni3fy
 伲	gni6rn
@@ -1209,7 +1208,6 @@ use_preset_vocabulary: true
 荑	yi2cy
 荑	yi2cy
 痍	yi2by
-易	yi2ow
 怡	yi2xt
 貽	yi2bt
 詒	yi2yt
@@ -1227,7 +1225,6 @@ use_preset_vocabulary: true
 遺	yi2zg
 遺	yi2zg
 遺	yi2zg
-矣	yi2su
 兮	yi2bk
 奚	yi2vd
 攜	yi2fj
@@ -1237,7 +1234,6 @@ use_preset_vocabulary: true
 遺	yi2zg
 遺	yi2zg
 遺	yi2zg
-嵇	yi2hu
 系	yi6ps
 系	yi6ps
 繫	yi6su
@@ -1258,10 +1254,12 @@ use_preset_vocabulary: true
 醫	i1yy
 翳	i1yu
 翳	i1yy
-以	i1rd
-以	i1ry
+以	i3rd
+以	i3ry
 已	i1vg
 已	i1ag
+已	i3vg
+已	i3ag
 伊	i1ry
 噫	i1ky
 犄	i1nq
@@ -1280,6 +1278,7 @@ use_preset_vocabulary: true
 億	i5ry
 憶	i5xy
 椅	i5mq
+倚	i3rq
 倚	i5rq
 漪	i5dq
 漪	i5dy
@@ -1288,7 +1287,7 @@ use_preset_vocabulary: true
 波	pu1dp
 波	pu1dp
 播	pu1ff
-簸	pu1vp
+簸	pu3vp
 補	pu3yf
 譜	pu3yp
 布	pu5ju
@@ -1322,10 +1321,6 @@ use_preset_vocabulary: true
 蒲	bu2cp
 菩	bu2ck
 菩	bu2cp
-簿	bu2vc
-簿	bu2vf
-簿	bu2vc
-簿	bu2vf
 匍	bu2gf
 葡	bu2cp
 皤	bu2bf

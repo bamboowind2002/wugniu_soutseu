@@ -1,5 +1,6 @@
 # 苏州话拼音
 
+- 本方案依据蘇州吳語拼音輸入方案 https://github.com/NGLI/rime-wugniu_soutseu 改编而来
 - `w x q` 分别代表平上去。阴阳依靠声母区分。
 - 原 `w-` 声母用 `ghu-` 替代
 - 入声尾用 `-h`

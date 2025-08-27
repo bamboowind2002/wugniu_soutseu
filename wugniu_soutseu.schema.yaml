@@ -64,7 +64,7 @@ speller:
   delimiter: " '"
   algebra:
     # - xform/^([bcdfghjklpqstvwxyz])$/$1_/
-    - xform/^([mnl]|gn)(?=.*[135])/;$1/
+    - xform/^([mnl]|gn|ng)(?=.*[135])/;$1/
     - xform/^(er[26][a-z][a-z])$/gh$1/
     - xform/^w/ghu/
     - xform/q(?=[78])/h/
@@ -134,12 +134,12 @@ translator:
   prism: wugniu_soutseu      # 根據拼寫運算生成棱鏡文件wugniu_soutseu
   spelling_hints: 1          # 標註拼音
   preedit_format:
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s)([aeiouy]*)(n)?w(?:$|(?= |'))/$1$2${3}1/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s)([aeiouy]*)(n)?w([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}1[$4$5]/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s)([aeiouy]*)(n)?x(?:$|(?= |'))/$1$2${3}3/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s)([aeiouy]*)(n)?x([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}3[$4$5]/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s)([aeiouy]*)(n)?q(?:$|(?= |'))/$1$2${3}5/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s)([aeiouy]*)(n)?q([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}5[$4$5]/
+    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?w(?:$|(?= |'))/$1$2${3}1/
+    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?w([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}1[$4$5]/
+    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?x(?:$|(?= |'))/$1$2${3}3/
+    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?x([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}3[$4$5]/
+    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?q(?:$|(?= |'))/$1$2${3}5/
+    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?q([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}5[$4$5]/
 
     - xform/(?:^|(?<= |'))([aeiou]+)(n)?w(?:$|(?= |'))/$1${2}1/
     - xform/(?:^|(?<= |'))([aeiou]+)(n)?w([a-z])([a-z])?(?:$|(?= |'))/$1${2}1[$3$4]/
@@ -148,8 +148,8 @@ translator:
     - xform/(?:^|(?<= |'))([aeiou]+)(n)?q(?:$|(?= |'))/$1${2}5/
     - xform/(?:^|(?<= |'))([aeiou]+)(n)?q([a-z])([a-z])?(?:$|(?= |'))/$1${2}5[$3$4]/
 
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s)?([aeiou]+)h(?:$|(?= |'))/$1${2}h7/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s)?([aeiou]+)h([a-z])([a-z])?(?:$|(?= |'))/$1${2}h7[$3$4]/
+    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)?([aeiou]+)h(?:$|(?= |'))/$1${2}h7/
+    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)?([aeiou]+)h([a-z])([a-z])?(?:$|(?= |'))/$1${2}h7[$3$4]/
 
     - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?w(?:$|(?= |'))/$1$2${3}2/
     - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?w([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}2[$4$5]/

@@ -60,7 +60,7 @@ engine:
     # - lua_filter@*aux_code@ZRM_Aux-code_4.3 
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyzQWERTYUI;"
+  alphabet: "abcdefghijklmnopqrstuvwxyzQWERTYUI;/"
   delimiter: " '"
   algebra:
     # - xform/^([bcdfghjklpqstvwxyz])$/$1_/
@@ -70,6 +70,7 @@ speller:
     - xform/q(?=[78])/h/
     
     - derive/^([;a-z]+)(\d|#)([a-z])([a-z])$/$1$2$3$4'/
+    - derive/^([;a-z]+)(\d|#)([a-z])([a-z])$/$1$2$3$4\x2F/
     - abbrev/^([;a-z]+)(\d|#)([a-z])([a-z])$/$1$2$3$4/ 
     - derive/^([;a-z]+)(\d|#)([a-z])([a-z])$/$1$2$3/ 
     # - abbrev/^([;a-z]+)(\d|#)([a-z])([a-z])$/$1$2$3/ 
@@ -134,32 +135,32 @@ translator:
   prism: wugniu_soutseu      # 根據拼寫運算生成棱鏡文件wugniu_soutseu
   spelling_hints: 1          # 標註拼音
   preedit_format:
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?w(?:$|(?= |'))/$1$2${3}¹/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?w([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}¹[$4$5]/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?x(?:$|(?= |'))/$1$2${3}³/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?x([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}³[$4$5]/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?q(?:$|(?= |'))/$1$2${3}⁵/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?q([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}⁵[$4$5]/
+    - xform/(?:^|(?<= |'|\x2F))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?w(?:$|(?= |'|\x2F))/$1$2${3}¹/
+    - xform/(?:^|(?<= |'|\x2F))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?w([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1$2${3}¹[$4$5]/
+    - xform/(?:^|(?<= |'|\x2F))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?x(?:$|(?= |'|\x2F))/$1$2${3}³/
+    - xform/(?:^|(?<= |'|\x2F))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?x([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1$2${3}³[$4$5]/
+    - xform/(?:^|(?<= |'|\x2F))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?q(?:$|(?= |'|\x2F))/$1$2${3}⁵/
+    - xform/(?:^|(?<= |'|\x2F))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)([aeiouy]*)(n)?q([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1$2${3}⁵[$4$5]/
 
-    - xform/(?:^|(?<= |'))([aeiou]+)(n)?w(?:$|(?= |'))/$1${2}¹/
-    - xform/(?:^|(?<= |'))([aeiou]+)(n)?w([a-z])([a-z])?(?:$|(?= |'))/$1${2}¹[$3$4]/
-    - xform/(?:^|(?<= |'))([aeiou]+)(n)?x(?:$|(?= |'))/$1${2}³/
-    - xform/(?:^|(?<= |'))([aeiou]+)(n)?x([a-z])([a-z])?(?:$|(?= |'))/$1${2}³[$3$4]/
-    - xform/(?:^|(?<= |'))([aeiou]+)(n)?q(?:$|(?= |'))/$1${2}⁵/
-    - xform/(?:^|(?<= |'))([aeiou]+)(n)?q([a-z])([a-z])?(?:$|(?= |'))/$1${2}⁵[$3$4]/
+    - xform/(?:^|(?<= |'|\x2F))([aeiou]+)(n)?w(?:$|(?= |'|\x2F))/$1${2}¹/
+    - xform/(?:^|(?<= |'|\x2F))([aeiou]+)(n)?w([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1${2}¹[$3$4]/
+    - xform/(?:^|(?<= |'|\x2F))([aeiou]+)(n)?x(?:$|(?= |'|\x2F))/$1${2}³/
+    - xform/(?:^|(?<= |'|\x2F))([aeiou]+)(n)?x([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1${2}³[$3$4]/
+    - xform/(?:^|(?<= |'|\x2F))([aeiou]+)(n)?q(?:$|(?= |'|\x2F))/$1${2}⁵/
+    - xform/(?:^|(?<= |'|\x2F))([aeiou]+)(n)?q([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1${2}⁵[$3$4]/
 
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)?([aeiou]+)h(?:$|(?= |'))/$1${2}h⁷/
-    - xform/(?:^|(?<= |'))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)?([aeiou]+)h([a-z])([a-z])?(?:$|(?= |'))/$1${2}h⁷[$3$4]/
+    - xform/(?:^|(?<= |'|\x2F))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)?([aeiou]+)h(?:$|(?= |'|\x2F))/$1${2}h⁷/
+    - xform/(?:^|(?<= |'|\x2F))(p|ph|;m|f|t|th|;n|;l|k|kh|h|c|ch|sh|ts|tsh|s|;gn|;ng)?([aeiou]+)h([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1${2}h⁷[$3$4]/
 
-    - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?w(?:$|(?= |'))/$1$2${3}²/
-    - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?w([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}²[$4$5]/
-    - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?x(?:$|(?= |'))/$1$2${3}⁴/
-    - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?x([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}⁴[$4$5]/
-    - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?q(?:$|(?= |'))/$1$2${3}⁶/
-    - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?q([a-z])([a-z])?(?:$|(?= |'))/$1$2${3}⁶[$4$5]/
+    - xform/(?:^|(?<= |'|\x2F))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?w(?:$|(?= |'|\x2F))/$1$2${3}²/
+    - xform/(?:^|(?<= |'|\x2F))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?w([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1$2${3}²[$4$5]/
+    - xform/(?:^|(?<= |'|\x2F))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?x(?:$|(?= |'|\x2F))/$1$2${3}⁴/
+    - xform/(?:^|(?<= |'|\x2F))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?x([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1$2${3}⁴[$4$5]/
+    - xform/(?:^|(?<= |'|\x2F))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?q(?:$|(?= |'|\x2F))/$1$2${3}⁶/
+    - xform/(?:^|(?<= |'|\x2F))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiouy]*)(n)?q([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1$2${3}⁶[$4$5]/
 
-    - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiou]+)h(?:$|(?= |'))/$1${2}h⁸/  
-    - xform/(?:^|(?<= |'))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiou]+)h([a-z])([a-z])?(?:$|(?= |'))/$1${2}h⁸[$3$4]/  
+    - xform/(?:^|(?<= |'|\x2F))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiou]+)h(?:$|(?= |'|\x2F))/$1${2}h⁸/  
+    - xform/(?:^|(?<= |'|\x2F))(b|m|v|d|n|gn|ng|l|g|gh|j|z|y)([aeiou]+)h([a-z])([a-z])?(?:$|(?= |'|\x2F))/$1${2}h⁸[$3$4]/  
     
   enable_completion: false
   comment_format:
